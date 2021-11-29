@@ -1,8 +1,3 @@
-# techdegree-project-2
-school
-
-
-
 2nd techdegree project
 Basketball STATS
 
@@ -14,4 +9,3 @@ Once the user has chosen dispaly stats and the team they want, the code will
 show the the name, # of players, and the players chosen randomly.
 The user will be given a prompt to continue by pressing 'ENTER' and when they do
 it will quit the program.
-
