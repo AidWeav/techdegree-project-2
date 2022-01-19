@@ -64,20 +64,15 @@ def choose_team():
 def clean_data():
     if len(replay) == 0:
         cleaned_players = []
-        players_experiences = []
-        players_height = []
-        for player in my_players:
+        for data in my_players:
             add_player_data = {}
-            add_player_data["name"] = player["name"]
-            player_experience = player["experience"]
-            players_experiences.append(player_experience) 
-            player_height = int(player['height'].split(' ')[0])
-            players_height.append(player_height)
+            add_player_data['name'] = data['name']
+            if data['experience'] == 'YES':
+                add_player_data['experience'] = True
+            else:
+                add_player_data['experience'] = False
+            add_player_data["height"] = int(data['height'].split(' ')[0])
             cleaned_players.append(add_player_data)
-        if player_experience == "YES":
-            player_experience = True
-        else:
-            player_experience = False
     else:
         cleaned_players = store_cleaned_players[0].copy()
     return cleaned_players
